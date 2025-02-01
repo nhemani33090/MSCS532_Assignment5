@@ -37,9 +37,7 @@ The program measures execution times for both versions on:
 - **Reverse-sorted data**
 
 ### **Observations**
-- **Random Data:** Both versions performed similarly with **O(n log n)** time, but **Randomized Quicksort had a slight overhead** due to random pivot selection.  
-- **Sorted Data:** **Deterministic Quicksort was faster** because choosing the middle pivot avoided worst-case behavior, while **Randomized Quicksort was slightly slower** due to extra pivot selection steps.  
-- **Reverse-Sorted Data:** Similar to sorted input, **Deterministic Quicksort remained efficient**, while **Randomized Quicksort had minor overhead** from random pivot selection.  
+- Both **deterministic and randomized Quicksort** performed similarly with **O(n log n)** time for **Sorted, Reverse-Sorted, and Random Data**. Randomized Quicksort had minor overhead from random pivot selection.
 
 ### **Conclusion**
 Both **deterministic and randomized Quicksort** achieved **O(n log n)** time in practice with a good pivot strategy. If **deterministic Quicksort had used the first or last element as the pivot**, sorted input would have triggered **O(n²) time complexity**. **Randomized Quicksort helps avoid worst-case scenarios**, but a **well-chosen deterministic pivot (like the middle element) can be slightly faster** due to avoiding the extra step of selecting a random pivot.
